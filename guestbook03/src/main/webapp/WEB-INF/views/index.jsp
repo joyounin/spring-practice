@@ -33,7 +33,7 @@
 		<table width=510 border=1>
 			<tr>
 				<td>[${count - status.index }] </td>
-				<td>이름:${vo.name }</td>
+				<td>${vo.name }</td>
 				<td>${vo.reg_date }</td>
 				<td><a href="${pageContext.request.contextPath }/deleteform?no=${vo.no }">삭제</a></td>
 			</tr>
