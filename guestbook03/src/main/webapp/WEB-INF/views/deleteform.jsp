@@ -9,7 +9,8 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="${pageContext.request.contextPath }/delete/${no }">
+	<form method="post" action="${pageContext.request.contextPath }/deleteform">
+	<input type='hidden' name="no" value="${no }">
 	<table>
 		<tr>
 			<td>비밀번호</td>
@@ -19,6 +20,6 @@
 	</table>
 	</form>
 	<br>
-	<a href="<%=request.getContextPath()%>">메인으로 돌아가기</a>
+	<a href="${pageContext.request.contextPath }">메인으로 돌아가기</a>
 </body>
 </html>
