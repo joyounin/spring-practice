@@ -9,18 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.douzone.container.config.soundsystem.CDPlayerConfig;
+
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations={"classpath:com/douzone/container/config/soundsystem/applicationContext.xml"})
-public class CDPlayerXmlConfigTest {
+@ContextConfiguration(classes= {CDPlayerConfig.class})
+public class CDPlayerJavaConfigTest {
 	
 	@Autowired
 	private CDPlayer cdPlayer;
-
+	
 	@Test
 	public void testCDPlayerNotNull() {
 		assertNotNull(cdPlayer);
 	}
-	
 	@Test
 	public void testUser() {
 		assertEquals("Playing 붕붕 by 김하온", cdPlayer.play());
